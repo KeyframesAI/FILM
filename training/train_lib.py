@@ -256,8 +256,8 @@ def train_loop(
       if iterations % save_summaries_frequency == 0:
         tf.summary.experimental.set_step(step=iterations)
         summary_writer_fn(distributed_step_outputs)
-        tf.summary.scalar('learning_rate',
-                          optimizer.learning_rate(iterations).numpy())
+        #tf.summary.scalar('learning_rate',
+        #                  optimizer.learning_rate(iterations).numpy())
 
       # Log steps/sec.
       if timer.should_trigger_for_step(iterations):

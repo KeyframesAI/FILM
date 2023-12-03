@@ -43,7 +43,9 @@ from absl import app
 from absl import flags
 from absl import logging
 import gin.tf
-from ..losses import losses
+from losses import losses
+
+print('a')
 
 # Reduce tensorflow logs to ERRORs only.
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
@@ -75,6 +77,7 @@ class TrainingOptions(object):
 
 
 def main(argv):
+  print('b')
   if len(argv) > 1:
     raise app.UsageError('Too many command-line arguments.')
 
